@@ -1,0 +1,15 @@
+all: false
+dir: "{{.InterfaceDir}}/mocks"
+filename: "{{.InterfaceName | snakecase}}.go"
+pkgname: mocks
+template: testify
+packages:
+  ledgerd/internal/handlers:
+    config:
+      all: true
+  ledgerd/internal/services:
+    config:
+      all: true
+  ledgerd/internal/models:
+    config:
+      all: true
